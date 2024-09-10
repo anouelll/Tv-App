@@ -1,0 +1,137 @@
+/* Navbar.css */
+
+.navbar_container {
+  background-color: #edffff;
+  color: rgb(86, 120, 214);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1001;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar_container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar_container ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.navbar_container li {
+  position: relative;
+}
+
+.navbar_container a {
+  color: rgb(86, 120, 214);
+  text-decoration: none;
+  font-size: large;
+  font-family: cursive;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.navbar_container a:hover {
+  background-color: #226ce7;
+  color: white;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #132f47;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  min-width: 150px;
+  z-index: 1002;
+}
+
+.dropdown_menu li {
+  display: block;
+  padding: 5px 0;
+}
+
+.dropdown_menu li a {
+  color: white;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown_menu li a:hover {
+  background-color: #226ce7;
+}
+
+.logo_navbar {
+  height: 50px;
+  margin-left: 100px;
+}
+
+.login_navbar {
+  height: 40px;
+  margin-right: 50px;
+}
+
+.login_container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.login_dropdown_menu {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #132f47;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  min-width: 150px;
+  z-index: 1002;
+}
+
+.login_dropdown_menu li {
+  padding: 5px 10px;
+}
+
+.login_dropdown_menu li a,
+.login_dropdown_menu li button {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login_dropdown_menu li a:hover,
+.login_dropdown_menu li button:hover {
+  background-color: #226ce7;
+}
+
+.genre_container {
+  position: relative;
+  display: list-item;
+  cursor: pointer;
+}

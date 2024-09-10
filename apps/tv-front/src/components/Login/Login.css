@@ -1,0 +1,119 @@
+.modal_overlay {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.7); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1000; 
+  }
+  
+  /* Contenu du modal */
+  .modal_content {
+    background: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 90%; 
+    max-width: 500px; 
+    position: relative; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Bouton de fermeture du modal */
+  .close_button {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    background: none; 
+    border: none; 
+    font-size: 1.5rem; 
+    color: #132f47; 
+    cursor: pointer;
+  }
+  
+  /* Réutilisation du style pour la boîte de connexion */
+  .login_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #edffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(50, 115, 195, 0.25);
+    width: 100%; 
+    max-width: 500px; /* Limite la largeur maximale */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .login_form img {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .login_form h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #132f47;
+  }
+  
+  .login_form h4 {
+    font-size: 14px;
+    margin: 0;
+    align-self: flex-start;
+    margin-left: 35px;
+    color: #132f47;
+  }
+  
+  .login_form input {
+    width: 80%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    padding: 0 15px;
+    background: #dae8ee;
+    border-color: #132f47;
+  }
+  
+  .login_form input::placeholder {
+    color: rgb(0 0 0 / 28%);
+  }
+  
+  .login_form button {
+    width: calc(80% - 50px);
+    height: 40px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #fff;
+    background: #226ce7;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center;
+  }
+  
+  .login_footer {
+    margin-top: 2px;
+    font-size: 12px;
+  }
+  
+  .login_footer a {
+    color: #226ce7;
+    text-decoration: none;
+  }
+  
+  .login_footer a:hover {
+    text-decoration: underline;
+  }
