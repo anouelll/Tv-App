@@ -12,11 +12,11 @@ import { Movies } from './movies/entities/movies.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'db',
       port: 5432,
-      username: 'pguser',
-      password: 'pguser',
-      database: 'tv-db',
+      username: 'eljida',
+      password: 'eljid123',
+      database: 'mydatabase',
       entities: [User, Movies], 
       synchronize: true,
     }),

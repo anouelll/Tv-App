@@ -1,0 +1,47 @@
+version: '3.9'
+
+services:
+  front: 
+    image: tv-front-prod 
+    ports:
+      - "80:80"
+    depends_on:
+      - back
+    networks:
+      - app-network
+
+  back: 
+    # build: 
+    #   context: apps/tv-back
+    image: tv-back-prod 
+    ports:
+      - "3000:3000"
+    # volumes:
+    #   - ./apps/tv-back:/app
+    depends_on:
+      - db
+    networks:
+      - app-network
+    # command: tail -f /dev/null
+
+  db:
+    image: postgres:15
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: eljida
+      POSTGRES_PASSWORD: eljid123
+      POSTGRES_DB: mydatabase
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - app-network
+    
+
+volumes:
+  postgres-data:
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,20 @@
+# Exclure les node_modules pour éviter de tout copier
+node_modules
+dist
+coverage
+
+# Fichiers de configuration et logs
+*.log
+.env
+*.md
+Dockerfile
+
+# Exclure les tests et fichiers inutiles
+*.test.*
+*.spec.*
+__tests__
+
+# Autres exclusions
+.cypress
+.vscode
+.git

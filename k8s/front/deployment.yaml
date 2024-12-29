@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front
+  labels:
+    app: front
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+      - name: front
+        image: tv-front-prod
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000
+        # env:
+        # - name: REACT_APP_API_URL
+        #   value: "http://back:4000/api"
